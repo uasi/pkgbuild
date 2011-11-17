@@ -1,0 +1,29 @@
+# Maintainer: Tomoki Aonuma <uasi@99cm.org>
+
+pkgname=tiarra
+pkgver=0.1svn36726
+tarballver=20100212
+pkgrel=1
+epoch=
+pkgdesc="Tiarra is pure-perl irc proxy(or bot) software, with single-thread, multi-io, object-oriented framework."
+arch=('any')
+url="http://clovery.jp/tiarra/"
+license=('Artistic2.0')
+depends=('perl')
+backup=()
+source=("http://clovery.jp/tiarra/archive/2010/02/${pkgname}-${tarballver}.tar.bz2")
+md5sums=('156e78a07c43800c2727f78618d9fa25')
+
+package() {
+  cd "$srcdir/$pkgname-$tarballver"
+
+  install -d $pkgdir/usr/share/$pkgname
+  install -m755 tiarra $pkgdir/usr/share/$pkgname
+  cp -a sample.conf $pkgdir/usr/share/$pkgname
+  cp -a bundle doc main module $pkgdir/usr/share/$pkgname
+
+  install -d $pkgdir/usr/bin
+  ln -s ../share/$pkgname/tiarra $pkgdir/usr/bin/tiarra
+}
+
+# vim:set ts=2 sw=2 et:
