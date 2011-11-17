@@ -1,9 +1,10 @@
-README
-======
+pkgbuild
+========
 
 This is my own PKGBUILD repository.
 
-References:
+SEE ALSO
+--------
 
 - [https://wiki.archlinux.org/index.php/PKGBUILD](PKGBUILD - ArchWiki)
 - [http://www.archlinux.org/pacman/PKGBUILD.5.html](PKGBUILD man page)
