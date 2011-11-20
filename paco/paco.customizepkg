@@ -1,0 +1,6 @@
+# Disable gpaco, get dependency-free
+
+remove#depends#gtk2
+remove#depends#gtkmm
+
+replace#global#configure#configure --disable-gpaco
